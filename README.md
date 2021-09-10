@@ -1,1 +1,1 @@
-My first program that handles exceptions in python. ^^
+My first programs that handles exceptions in python. ^^
