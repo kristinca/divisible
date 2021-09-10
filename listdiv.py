@@ -84,6 +84,11 @@ while True:
                 n3 = []
                 for i in range(0, int(n2)):
                     n3.append(input('\nEnter the index of the element to check for divisibility...\t'))
+                # check if there are lists, tuples or dictionaries among the chosen elements
+                for i in str(list(dict.fromkeys(n3))):
+                    if '[' and ']' in str(i) or '(' and ')' or ('{' and '}') in str(i):
+                        print(f'A list, a tuple or a dictionary in {list1} has been found. ')
+                #         it works ok, to do ...
                 d = input("\nEnter the divisor or enter 'q' to exit...\t")
                 for j in list(dict.fromkeys(n3)):
                     try:
