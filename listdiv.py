@@ -87,7 +87,7 @@ while True:
                  f" or enter 'q' to exit...\t")
             fin(n2)
             if int(n2) <= 0 or int(n2) > len(list1):
-                continue
+
             else:
                 n3 = []
                 for i in range(0, int(n2)):
@@ -97,7 +97,7 @@ while True:
                 #     if isinstance(list1[i], list) or isinstance(list1[i], tuple):
                 #         print('ok')
                 #     else:
-                #         continue
+                #
                 #     if '[' and ']' in str(i) or '(' and ')' or ('{' and '}') in str(i):
                 #         print(f'A list, a tuple or a dictionary in {list1} has been found. ')
                 # #         it works ok, to do ...
@@ -121,10 +121,10 @@ while True:
                     m5 = f" Inappropriate argument value: {list1[j]}. "
                     print(f'\n{nasterisk(len(m5))}\n{m5}\n{nasterisk(len(m5))}\n')
                 print("\nEnter 'q' to exit.")
-                continue
+
     except TypeError:
         msginfo()
-        continue
+
     except ValueError:
         msginfo()
-        continue
+
