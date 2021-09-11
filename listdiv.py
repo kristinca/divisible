@@ -128,35 +128,3 @@ while True:
     except ValueError:
         msginfo()
         continue
-
-#
-# def proveriint(i):
-#     if isinstance(i, int):
-#         print('ok')
-#
-#
-# l1 = [6, 7, 'guidhgdi', ('ytry', 6, 8.9, [3, 4, [4, 'gfdgd']]), ['rewrew', 9778, -2.364]]
-#
-#
-# def flatPrint(myList):
-#     for thing in myList:
-#         if isinstance(thing, list) or isinstance(thing, tuple):
-#             flatPrint(thing)
-#         else:
-#             print(thing)
-#
-# flatPrint(l1)
-
-# for elem in l1:
-#     if isinstance(elem, int):
-#         print(elem)
-#     else:
-#         for elem1 in elem:
-#             if isinstance(elem1, int):
-#                 print(elem1)
-#             else:
-#                 for elem2 in elem1:
-#                     if isinstance(elem2, int):
-#                         print('iii')
-#                     else:
-#                         print(f'e2   {elem2}')
