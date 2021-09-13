@@ -1,9 +1,7 @@
 """
-
 A simple program to check if some input elements of a list
          are divisible by some input integer
           without using the modulo operator
-
 """
 
 import sys
@@ -46,7 +44,7 @@ def list_in_list_el(l):
     for num1 in l:
         if isinstance(num1, (list, tuple)):
             for num2 in num1:
-                l2.append(num2)
+                l2.append(num2.strip())
         else:
             l2.append(num1)
     return l2
@@ -99,18 +97,6 @@ while True:
             msginfo()
         else:
             list1 = inputel(n1)
-            # for i in range(0, int(n1)):
-            #     list1.append(input(f'\nEnter the element with index value {i} ... \t'))
-            # for elem in list1:
-            #     if '[' == str(elem)[0] and ']' == str(elem)[len(str(elem))-1]:
-            #         elem = list(elem)
-            #         print('aaaaaaaaaaaaaaa list fooouuunnndd! :D')
-            #     elif '(' == str(elem)[0] and ')' == str(elem)[len(str(elem)) - 1]:
-            #         elem = tuple(elem)
-            #         print('aaaaaaaaaaaaaaa tuple fooouuunnndd! :D')
-                # elif '{' == str(elem)[0] and '}' == str(elem)[len(str(elem)) - 1]:
-                #     elem = dict(elem)
-                #     print('aaaaaaaaaaaaaaa dictionary fooouuunnndd! :D')
             n2 = input(f"\nEnter the number of elements you want to check for divisibility from list {list1}"
                  f" or enter 'q' to exit...\t")
             fin(n2)
@@ -125,7 +111,6 @@ while True:
                 list2 = []
                 for elem in list(dict.fromkeys(n3)):
                     list2.append(list1[int(elem)])
-                list3 = []
                 list3 = list_in_list_el(list2)
                 for element in list3:
                     div1(int(element), d)
