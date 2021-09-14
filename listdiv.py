@@ -10,10 +10,11 @@ import sys
 def nasterisk(n):
     """ A function that returns n asterisks """
 
-    return(int(n) * '*')
+    return (int(n) * '*')
+
 
 def fin(s):
-    """ A simple function to end the program when entered 'q' """
+    """ A simple function to end the program when entered q """
 
     if s == 'q':
         sys.exit()
@@ -49,6 +50,7 @@ def list_in_list_el(l):
             l2.append(num1)
     return l2
 
+
 def div1(num1, num2):
     """
     A simple function to check if an input integer is divisible by another input integer
@@ -63,6 +65,7 @@ def div1(num1, num2):
                   f'the result is : {int(answer)}.')
         else:
             print(f'\nThe number {first_number} is not divisible by the number {second_number}.')
+            pass
 
     except ZeroDivisionError:
         """ We handle the ZeroDivisionError """
@@ -76,14 +79,10 @@ def div1(num1, num2):
         print(f"\n{nasterisk(len(m2))}\n{m2}\n{nasterisk(len(m2))}")
 
 
-
 def msginfo():
     """ A simple output messages to be printed when handling exceptions """
     m1 = ' Inappropriate argument type or inappropriate argument value! '
-    m2 = " Enter 'q' to exit. "
     print(f'\n{nasterisk(len(m1))}\n{m1}\n{nasterisk(len(m1))}')
-    print(f"\n{nasterisk(len(m2))}\n{m2}\n{nasterisk(len(m2))}")
-
 
 
 while True:
@@ -92,21 +91,22 @@ while True:
         m1 = ' S T A R T '
         print(f'\n {nasterisk(len(m1))}{m1}{nasterisk(len(m1))} \n')
         list1 = []
-        n1 = input('\nEnter the number of elements in the list...\t')
+        n1 = input("\nEnter the number of elements in the list or enter q to exit...\t")
+        fin(n1)
         if int(n1) <= 0:
             msginfo()
         else:
             list1 = inputel(n1)
             n2 = input(f"\nEnter the number of elements you want to check for divisibility from list {list1}"
-                 f" or enter 'q' to exit...\t")
+                       f" or enter 'q' to exit...\t")
             fin(n2)
             if int(n2) <= 0 or int(n2) > len(list1):
-                continue
+                pass
             else:
                 n3 = []
                 for i in range(0, int(n2)):
                     n3.append(input('\nEnter the index of the element to check for divisibility...\t'))
-                d = input("\nEnter the divisor or enter 'q' to exit...\t")
+                d = input("\nEnter the divisor or enter q to exit...\t")
                 fin(d)
                 list2 = []
                 for elem in list(dict.fromkeys(n3)):
@@ -114,12 +114,9 @@ while True:
                 list3 = list_in_list_el(list2)
                 for element in list3:
                     div1(int(element), d)
-                print("\nEnter 'q' to exit.")
 
     except TypeError:
         msginfo()
-        continue
 
     except ValueError:
         msginfo()
-        continue
