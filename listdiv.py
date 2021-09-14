@@ -15,7 +15,7 @@ def nasterisk(n):
 
 
 def empty_spaces(n):
-    """ A function that returns n asterisks """
+    """ A function that returns n empty spaces """
 
     return (int(n) * ' ')
 
