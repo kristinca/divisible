@@ -87,7 +87,7 @@ def div1(num1, num2):
 
 
 def msginfo():
-    """ A simple output messages to be printed when handling exceptions """
+    """ A simple output message to be printed when handling exceptions """
     m1 = ' Inappropriate argument type or inappropriate argument value! '
     print(f'\n{nasterisk(len(m1))}\n{m1}\n{nasterisk(len(m1))}')
 
