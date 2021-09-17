@@ -13,13 +13,6 @@ def nasterisk(n):
     return (int(n) * '*')
 
 
-
-def empty_spaces(n):
-    """ A function that returns n asterisks """
-
-    return (int(n) * ' ')
-
-
 def fin(s):
     """ A simple function to end the program when entered q """
 
@@ -96,9 +89,7 @@ while True:
     """ The program ends by entering 'q' """
     try:
         m1 = ' S T A R T '
-        print(f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n'
-              f'{nasterisk(len(m1))}{m1}{nasterisk(len(m1))}'
-              f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n')
+        print(f'\n {nasterisk(len(m1))}{m1}{nasterisk(len(m1))} \n')
         list1 = []
         n1 = input("\nEnter the number of elements in the list or enter q to exit...\t")
         fin(n1)
@@ -110,7 +101,7 @@ while True:
                        f" or enter 'q' to exit...\t")
             fin(n2)
             if int(n2) <= 0 or int(n2) > len(list1):
-                msginfo()
+                pass
             else:
                 n3 = []
                 for i in range(0, int(n2)):
