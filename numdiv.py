@@ -3,36 +3,43 @@ A simple program to check if an input integer is divisible by another input inte
                     without using the modulo operator
 """
 
-print("Enter 'q' to exit.")
+import listdiv
 
-while True:
-    """ The program ends by entering q """
 
-    try:
-        """ We input the first and second number and check if they are integers """
+def main():
+    pass
 
-        first_number = input("\nFirst number: ")
-        if first_number == 'q':
-            break
-        second_number = input("Second number: ")
-        if second_number == 'q':
-            break
-        answer = int(first_number) / int(second_number)
-        if answer.is_integer():
-            print(f'The number {first_number} is divisible by the number {second_number},'
-                  f'the result is : {int(answer)}.')
-        else:
-            print(f'The number {first_number} is not divisible by the number {second_number}.')
-        print("\nEnter 'q' to exit.")
 
-    except ZeroDivisionError:
-        """ We handle the ZeroDivisionError """
+if __name__ == "__main__":
 
-        print('Zero division!')
-        print("\nEnter 'q' to exit.")
+    print("Enter 'q' to exit.")
 
-    except ValueError:
-        """ We handle the ValueError """
+    while True:
+        """ The program ends by entering q """
 
-        print('At least one of the numbers is not an integer!')
-        print("\n Enter 'q' to exit.")
+        try:
+            """ We input the first and second number and check if they are integers """
+
+            first_number = input("\nEnter the first number or enter q to exit...\t ")
+            listdiv.fin(first_number)
+            second_number = input("\nEnter the first number or enter q to exit...\t ")
+            listdiv.fin(second_number)
+            answer = int(first_number) / int(second_number)
+            if answer.is_integer():
+                print(f'The number {first_number} is divisible by the number {second_number},'
+                      f'the result is : {int(answer)}.')
+            else:
+                print(f'The number {first_number} is not divisible by the number {second_number}.')
+            print("\nEnter 'q' to exit.")
+
+        except ZeroDivisionError:
+            """ We handle the ZeroDivisionError """
+
+            print('Zero division!')
+            print("\nEnter 'q' to exit.")
+
+        except ValueError:
+            """ We handle the ValueError """
+
+            print('At least one of the numbers is not an integer!')
+            print("\n Enter 'q' to exit.")
