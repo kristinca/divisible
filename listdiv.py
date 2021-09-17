@@ -92,40 +92,49 @@ def msginfo():
     print(f'\n{nasterisk(len(m1))}\n{m1}\n{nasterisk(len(m1))}')
 
 
-while True:
-    """ The program ends by entering 'q' """
-    try:
-        m1 = ' S T A R T '
-        print(f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n'
-              f'{nasterisk(len(m1))}{m1}{nasterisk(len(m1))}'
-              f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n')
-        list1 = []
-        n1 = input("\nEnter the number of elements in the list or enter q to exit...\t")
-        fin(n1)
-        if int(n1) <= 0:
-            msginfo()
-        else:
-            list1 = inputel(n1)
-            n2 = input(f"\nEnter the number of elements you want to check for divisibility from list {list1}"
-                       f" or enter 'q' to exit...\t")
-            fin(n2)
-            if int(n2) <= 0 or int(n2) > len(list1):
+def startmsg():
+    m1 = ' S T A R T '
+    print(f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n'
+          f'{nasterisk(len(m1))}{m1}{nasterisk(len(m1))}'
+          f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n')
+
+
+def main():
+    pass
+
+
+if __name__ == "__main__":
+    while True:
+        """ The program ends by entering 'q' """
+        try:
+            startmsg()
+            list1 = []
+            n1 = input("\nEnter the number of elements in the list or enter q to exit...\t")
+            fin(n1)
+            if int(n1) <= 0:
                 msginfo()
             else:
-                n3 = []
-                for i in range(0, int(n2)):
-                    n3.append(input('\nEnter the index of the element to check for divisibility...\t'))
-                d = input("\nEnter the divisor or enter q to exit...\t")
-                fin(d)
-                list2 = []
-                for elem in list(dict.fromkeys(n3)):
-                    list2.append(list1[int(elem)])
-                list3 = list_in_list_el(list2)
-                for element in list3:
-                    div1(int(element), d)
+                list1 = inputel(n1)
+                n2 = input(f"\nEnter the number of elements you want to check for divisibility from list {list1}"
+                           f" or enter 'q' to exit...\t")
+                fin(n2)
+                if int(n2) <= 0 or int(n2) > len(list1):
+                    msginfo()
+                else:
+                    n3 = []
+                    for i in range(0, int(n2)):
+                        n3.append(input('\nEnter the index of the element to check for divisibility...\t'))
+                    d = input("\nEnter the divisor or enter q to exit...\t")
+                    fin(d)
+                    list2 = []
+                    for elem in list(dict.fromkeys(n3)):
+                        list2.append(list1[int(elem)])
+                    list3 = list_in_list_el(list2)
+                    for element in list3:
+                        div1(int(element), d)
 
-    except TypeError:
-        msginfo()
+        except TypeError:
+            msginfo()
 
-    except ValueError:
-        msginfo()
+        except ValueError:
+            msginfo()

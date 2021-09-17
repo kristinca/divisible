@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
         try:
             """ We input the first and second number and check if they are integers """
-
+            listdiv.startmsg()
             first_number = input("\nEnter the first number or enter q to exit...\t ")
             listdiv.fin(first_number)
             second_number = input("\nEnter the first number or enter q to exit...\t ")
