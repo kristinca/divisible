@@ -37,7 +37,7 @@ def main():
 
 if __name__ == "__main__":
     while True:
-        """ The program ends by entering 'q' """
+        """ The program ends by entering q """
         try:
             listdiv.startmsg()
             list1 = []
