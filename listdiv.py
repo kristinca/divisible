@@ -13,7 +13,6 @@ def nasterisk(n):
     return (int(n) * '*')
 
 
-
 def empty_spaces(n):
     """ A function that returns n asterisks """
 
@@ -79,7 +78,6 @@ def div1(num1, num2):
         m1 = ' Zero division! '
         print(f"\n{nasterisk(len(m1))}\n{m1}\n{nasterisk(len(m1))}")
 
-
     except ValueError:
         """ We handle the ValueError """
         m2 = ' At least one of the numbers is not an integer! '
@@ -99,8 +97,8 @@ def startmsg():
           f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n')
 
 
-def main():
-    pass
+# def main():
+#     pass
 
 
 if __name__ == "__main__":
@@ -137,7 +135,4 @@ if __name__ == "__main__":
             msginfo()
 
         except ValueError:
-            msginfo()
-
-        except IndexError:
             msginfo()

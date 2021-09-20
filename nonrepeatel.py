@@ -13,20 +13,21 @@ def non_repeat_el(l1):
     and their indexes in a list """
 
     l3 = l1.copy()
-    # we can remove the repeating elements of the initial list
-    # and still get their values and indexes -> from the copy list
+    # we can remove the repeating elements of the COPY list
+    # and still get their values and indexes
+    # -> from the INITIAL list AAA :D
 
     el_non_repeat = []
     non_repeat_index = []
     l2 = list(dict.fromkeys(l1))
     # we get the unique elements in the initial list
     for num in l2:
-        l1.remove(num)
-        if num not in l1:
-            non_repeat_index.append(l3.index(num))
+        l3.remove(num)
+        if num not in l3:
+            non_repeat_index.append(l1.index(num))
             el_non_repeat.append(num)
     if len(el_non_repeat) > 0:
-        print(f'Non-repeating elements from the list{l3}:\n {el_non_repeat}, their indexes: {non_repeat_index}')
+        print(f'Non-repeating elements from the list{l1}:\n {el_non_repeat}, their indexes: {non_repeat_index}')
     else:
         print(f'There are no non-repeating elements in the list {l3}')
 
@@ -53,4 +54,7 @@ if __name__ == "__main__":
             listdiv.msginfo()
 
         except ValueError:
+            listdiv.msginfo()
+
+        except IndexError:
             listdiv.msginfo()
