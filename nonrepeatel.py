@@ -13,14 +13,9 @@ def non_repeat_el(l1):
     and their indexes in a list """
 
     l3 = l1.copy()
-    # we can remove the repeating elements of the COPY list
-    # and still get their values and indexes
-    # -> from the INITIAL list AAA :D
-
     el_non_repeat = []
     non_repeat_index = []
     l2 = list(dict.fromkeys(l1))
-    # we get the unique elements in the initial list
     for num in l2:
         l3.remove(num)
         if num not in l3:

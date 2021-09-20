@@ -97,8 +97,8 @@ def startmsg():
           f'\n{empty_spaces(len(m1))}{nasterisk(len(m1) + 1)}\n')
 
 
-# def main():
-#     pass
+def main():
+    pass
 
 
 if __name__ == "__main__":
